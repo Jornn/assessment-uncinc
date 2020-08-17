@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('todo', 'TodoController@index');
-Route::post('todo', 'TodoController@store');
+Route::get('todo', 'TodoController@index')->middleware('client');
+Route::post('todo', 'TodoController@store')->middleware('client');
